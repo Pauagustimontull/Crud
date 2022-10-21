@@ -13,7 +13,7 @@
 <h1 id="H11">Tienda</h1>
     <div id="Div1">
       
-      <form action="/datos.php" method="post">
+      <form action="/Tienda/datos.php" method="post">
          <br><br>
       
           <div class="row">
