@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2022 a las 01:58:52
+-- Tiempo de generación: 21-10-2022 a las 16:13:01
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -102,7 +102,9 @@ INSERT INTO `productos` (`ID`, `Nombre`, `Cantidad`, `Precio`, `Descripcion`) VA
 (17, 'adadda', 12, 23, 'dfgdgf'),
 (18, 'dfg', 1, 2, 'd'),
 (19, 'Coche', 12, 12000, 'Opel corsa'),
-(20, 'Movil', 12, 120, 'IPhone');
+(20, 'Movil', 12, 120, 'IPhone'),
+(26, 'PC', 12, 1299, 'MacBook'),
+(27, 'Movil', 2, 1000, 'Samsung');
 
 -- --------------------------------------------------------
 
@@ -127,7 +129,8 @@ INSERT INTO `usuarios` (`ID`, `Nombre`, `Cont`, `correo`) VALUES
 (3, 'Leo', 'cfaf50ac3721461bd3a2d27ef5f35e144901fbb6', 'leo@adjs'),
 (4, 'LEo', '1f0a51c36efaa0f44e4899c26d2028681997c8ea', 'ls@asd'),
 (5, 'asdasd', '4b2b79b6f371ca18f1216461cffeaddf6848a50e', 'asdkjas@kadjg'),
-(6, 'pau', '1ba47064494cc437b385dec68747a9487cbcfecd', 'pau@pau.com');
+(6, 'pau', '1ba47064494cc437b385dec68747a9487cbcfecd', 'pau@pau.com'),
+(7, 'Joako', 'e5c88670a83715c9b162be2bd2bc82e6fc431970', 'sadas@akdsj.asd');
 
 --
 -- Índices para tablas volcadas
@@ -177,13 +180,13 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
