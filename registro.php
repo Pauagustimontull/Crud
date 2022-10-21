@@ -19,8 +19,14 @@ if(!$con){
     
         $contraseñabien = sha1($contraseña);
         $sql="INSERT INTO `usuarios`(`ID`, `Nombre`, `Cont`, `correo`) VALUES (NULL,'$nombre','$contraseñabien','$correo')";
-        
         $consulta = mysqli_query($con,$sql);
+        $log =  $con-> query ("SELECT ID FROM `usuarios` WHERE Nombre='$nombre' and Cont ='$contraseñabien'");
+        
+        $datos = $log -> fetch_object();
+        echo $datos;
+        $sql3="INSERT INTO `carrito`(`ID`, `ID_Usu`) VALUES (NULL,'$log')";
+        $consulta2 = mysqli_query($con,$sql3);
+        
         //header('Location: '.$Crud);
     ?>
     <!DOCTYPE html>

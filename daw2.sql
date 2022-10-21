@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2022 a las 16:13:01
+-- Tiempo de generación: 21-10-2022 a las 20:18:56
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -44,6 +44,36 @@ INSERT INTO `alumnos` (`id`, `nombre`, `apellidos`, `edad`) VALUES
 (3, 'Pau', 'Agusti', 18),
 (4, 'UN', 'ds', 23),
 (5, 'asd', 'wewe', 34);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `articulo_carrito`
+--
+
+CREATE TABLE `articulo_carrito` (
+  `ID_Carrito` int(11) NOT NULL,
+  `ID_Prod` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `carrito`
+--
+
+CREATE TABLE `carrito` (
+  `ID` int(11) NOT NULL,
+  `ID_Usu` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `carrito`
+--
+
+INSERT INTO `carrito` (`ID`, `ID_Usu`) VALUES
+(1, 6),
+(2, 0);
 
 -- --------------------------------------------------------
 
@@ -129,8 +159,7 @@ INSERT INTO `usuarios` (`ID`, `Nombre`, `Cont`, `correo`) VALUES
 (3, 'Leo', 'cfaf50ac3721461bd3a2d27ef5f35e144901fbb6', 'leo@adjs'),
 (4, 'LEo', '1f0a51c36efaa0f44e4899c26d2028681997c8ea', 'ls@asd'),
 (5, 'asdasd', '4b2b79b6f371ca18f1216461cffeaddf6848a50e', 'asdkjas@kadjg'),
-(6, 'pau', '1ba47064494cc437b385dec68747a9487cbcfecd', 'pau@pau.com'),
-(7, 'Joako', 'e5c88670a83715c9b162be2bd2bc82e6fc431970', 'sadas@akdsj.asd');
+(6, 'pau', '1ba47064494cc437b385dec68747a9487cbcfecd', 'pau@pau.com');
 
 --
 -- Índices para tablas volcadas
@@ -141,6 +170,18 @@ INSERT INTO `usuarios` (`ID`, `Nombre`, `Cont`, `correo`) VALUES
 --
 ALTER TABLE `alumnos`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `articulo_carrito`
+--
+ALTER TABLE `articulo_carrito`
+  ADD PRIMARY KEY (`ID_Carrito`);
+
+--
+-- Indices de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indices de la tabla `login`
@@ -171,6 +212,18 @@ ALTER TABLE `alumnos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT de la tabla `articulo_carrito`
+--
+ALTER TABLE `articulo_carrito`
+  MODIFY `ID_Carrito` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
@@ -186,7 +239,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

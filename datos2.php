@@ -23,6 +23,8 @@ if(!$con){
     
         $contraseñabien = sha1($contraseña);
         $sql =  $con-> query ("SELECT * FROM `usuarios` WHERE Nombre = '$nombre' and Cont = '$contraseñabien'");
+          
+          
       if($datos = $sql -> fetch_object()){
         header("location: Tienda.php");
       }else{
