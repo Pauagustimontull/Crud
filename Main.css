@@ -69,6 +69,10 @@ button {
    }
 #Bt1{
     margin: 0 auto; 
+    text-decoration:none;
+}   
+#Bt32{
+    width: 33.33%;
 }   
 .myButton {
 	box-shadow:inset 0px 1px 0px 0px #f7c5c0;
