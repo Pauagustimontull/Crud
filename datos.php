@@ -8,10 +8,11 @@ $descripcion = $_POST['Descripcion'];
 $contad = 0;
 
 $servidor = "localhost";
-$usuario = "root";
-$password = "";
-$bd = "daw2";
+$usuario = "id19751186_root";
+$password = "~1dkffHOtQtkLGLy";
+$bd = "id19751186_localhost";
 
+echo $nombre,$ID ,$cantidad,$precio,$descripcion;
 
 $con = mysqli_connect($servidor,$usuario,$password,$bd);
 
@@ -22,7 +23,9 @@ if(!$con){
     mysqli_set_charset($con,"utf8");
 $sql="INSERT INTO `productos`(`ID`, `Nombre`, `Cantidad`, `Precio`, `Descripcion`) VALUES (NULL,'$nombre','$cantidad','$precio','$descripcion')";
 $consulta = mysqli_query($con,$sql);
-header("location:Tienda.php" );
+
+
+//header("location:Tienda.php?nom=$nom " );
 if(!$consulta){
     die("No se ha podido realizar el insert");
 }else{

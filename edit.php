@@ -1,12 +1,12 @@
 <?php
 $servidor = "localhost";
-$usuario = "root";
-//$password = "usbw";
-$bd = "daw2";
+$usuario = "id19751186_root";
+$password = "~1dkffHOtQtkLGLy";
+$bd = "id19751186_localhost";
 
 
 
-$con = mysqli_connect($servidor,$usuario,"",$bd);
+$con = mysqli_connect($servidor,$usuario,"~1dkffHOtQtkLGLy",$bd);
 
 
     mysqli_set_charset($con,"utf8");
@@ -34,7 +34,8 @@ $con = mysqli_connect($servidor,$usuario,"",$bd);
 
             $sql2 =  " UPDATE productos set Nombre = '$nombre', Cantidad = $cantidad, Precio = $precio, Descripcion = '$descripcion' WHERE ID=$id ";
             $consulta2 = mysqli_query($con,$sql2);
-            header("location: Tienda.php");
+            $nom =  $_GET['nom'];
+            header("location: Tienda.php?nom=$nom");
             
 
             
@@ -53,7 +54,7 @@ $con = mysqli_connect($servidor,$usuario,"",$bd);
      <div class="row">
      <div class="col-md-4-mx-auto">
      <div class="card card-body">
-        <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
+        <form action="edit.php?id=<?php echo $_GET['id']?>& nom=<?php echo $_GET['nom']?>" method="POST">
             <div class="form-group">
             <a>Nombre</a>
             <textarea name="Nombre" class="form-control" cols="2" rows="2"><?php echo $nombre; ?></textarea>
@@ -79,7 +80,7 @@ $con = mysqli_connect($servidor,$usuario,"",$bd);
     </div>
   </div>
 </div>
-<form action="/Tienda/Tienda.php" method="post">  
+<form action="/Tienda.php?nom=<?php echo $_GET['nom']?>" method="post">  
     <button id="Bt1" style="text-decoration:none">
             <div class="svg-wrapper-1" style="text-decoration:none">
                 <div class="svg-wrapper" style="text-decoration:none">

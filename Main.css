@@ -98,3 +98,8 @@ button {
 	position:relative;
 	top:1px;
 } 
+#precio{
+    text-align:center;
+    color: #d83526;
+
+}

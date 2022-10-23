@@ -8,9 +8,9 @@ $descripcion = $_POST['Descripcion'];
 $contad = 0;
 
 $servidor = "localhost";
-$usuario = "root";
-$password = "";
-$bd = "daw2";
+$usuario = "id19751186_root";
+$password = "~1dkffHOtQtkLGLy";
+$bd = "id19751186_localhost";
 
 
 $con = mysqli_connect($servidor,$usuario,$password,$bd);

@@ -48,7 +48,7 @@
             <?php
 $contad = 0;
 $servidor = "localhost";
-$usuario = "root";
+$usuario = "id19751186_root";
 $password = "~1dkffHOtQtkLGLy";
 $bd = "id19751186_localhost";
 
@@ -88,7 +88,8 @@ $idusu = $fila['ID'];
     $consulta4=mysqli_query($con,$sql4);
    $prod=$consulta4->fetch_assoc();
    array_push($stackpr, $prod['Precio']); 
-
+       if($stackcant[$index]>=1){
+        
         echo "<tr>";
         echo "<td>".$stack[$index]."</td>";
         echo "<td>".$prod['Nombre']."</td>";
@@ -96,6 +97,7 @@ $idusu = $fila['ID'];
         echo "<td>".$prod['Precio']."</td>";
         echo "<td>".$prod['Descripcion']."</td>";
         $index = $index+1;
+       }
         
         ?>
 
@@ -107,7 +109,7 @@ $idusu = $fila['ID'];
     }
     $total = 0;
     if($index >=1){
-    for ($i = 0; $i <= $index-1; $i++) {
+    for ($i = 0; $i <= $index; $i++) {
         $total = $stackcant[$i] * $stackpr[$i] +$total;
     }
 
@@ -121,9 +123,12 @@ $idusu = $fila['ID'];
 echo $total;
 ?></h1>
 
+<style type="text/css"> 
+a { text-decoration: none; 
+   } 
+</style> 
 
-
-<a href="/Tienda.php?nom=<?php echo $_GET['nom'] ?>">
+<a href="/TiendaAdmin.php?nom=<?php echo $_GET['nom'] ?>">
         <button id="Bt1" style="text-decoration:none">
             <div class="svg-wrapper-1" style="text-decoration:none">
                 <div class="svg-wrapper" style="text-decoration:none">

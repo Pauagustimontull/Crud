@@ -16,8 +16,9 @@
     <nav class="navbar navbar-dark bg-dark">
 
         <div class="container-fluid">
-            <a class="navbar-brand" href="/Tienda.php?nom=<?php echo $_GET['nom'] ?>">PauTienda</a>
-            <a href="/carrito_finalizar.php?nom=<?php echo $_GET['nom'] ?>"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/TiendaAdmin.php?nom=<?php echo $_GET['nom'] ?>">PauTienda</a>
+            <a class="navbar-brand" href="/Key.php?nom=<?php echo $_GET['nom'] ?>">Gernerar Key Nuevo usuario</a>
+            <a href="/carrito_finalizar_admin.php?nom=<?php echo $_GET['nom'] ?>"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="bi bi-cart">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
@@ -71,7 +72,7 @@
 
                 <td style="width:15px"> <a href="/edit.php?id=<?php echo $fila['ID']  ?>&nom=<?php echo $nombre ?>"><button class="btn btn-success">Editar</button></td></a>
 
-                <td style="width:15px"> <a href="/eliminar.php?id=<?php echo $fila['ID'] ?>&nom=<?php echo $nombre ?>"> <button class="btn btn-danger">Eliminar</button> </td></a>
+<td style="width:15px"> <a href="/eliminar.php?id=<?php echo $fila['ID'] ?>&nom=<?php echo $nombre ?>"> <button class="btn btn-danger">Eliminar</button> </td></a>
 
                 <td style="width:25px"> <a href="/carrito.php?id=<?php echo $fila['ID'] ?>&nom=<?php echo $nombre ?>"> <button type="button" class="btn btn-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
@@ -87,12 +88,15 @@
             ?>
         </tbody>
     </table>
+    <style type="text/css">
+    a { text-decoration: none; 
+   } 
+</style> 
 
 
 
 
-
-    <a href="/Crud.php?nom=<?php echo $_GET['nom'] ?>">
+<a href="/Crud.php?nom=<?php echo $_GET['nom'] ?>">
         <button id="Bt1" style="text-decoration:none">
             <div class="svg-wrapper-1" style="text-decoration:none">
                 <div class="svg-wrapper" style="text-decoration:none">
